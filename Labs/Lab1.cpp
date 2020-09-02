@@ -25,7 +25,7 @@ std::string TrimEnds(std::string isReturned){
     //can i use .size() ?
     for(int i = 0; isReturned[i]; i++){
         if(isReturned[i] != ' '){
-            return isReturned[i];
+            cout<< isReturned[i];
         }
     }
 }
@@ -60,10 +60,16 @@ class NumChange{
         }
 
         //public overloaded constructor that takes three double parameters
-        NumChange(double EleX, double EleZ, double EleY){
-            x = EleX;
-            z = EleZ;
-            y = EleY;
+        NumChange(double x, double z, double y){
+            arr[0] = x;
+            arr[1] = z;
+            arr[2] = z;
+
+            // x = arr[0];
+            // y = arr[1];
+            // z = arr[2];
+
+
         }
 
 
@@ -81,8 +87,9 @@ class NumChange{
             if(this !=  &rhs)   //parameter is not equal to current object
             {
                 x = rhs.x;
-                z = rhs.z;
                 y = rhs.y;
+                z = rhs.z;
+                
             }
             return *this;
         }
@@ -93,38 +100,44 @@ class NumChange{
         //A public double constant method named GetX() that takes no parameters. It returns the first element of the
         // field.
         double GetX() const{
-            int x =arr[0];
+            // int x =arr[0];
             return x;
         } 
 
         //  A public double constant method named GetZ() that takes no parameters. It returns the third element of the
         // field.
-        double GetZ() const{
-            int z = arr[2];
+        double GetY() const {
+            // int y = arr[2];
+            return y;
+        }
+
+        double GetZ() const {
+            // int z = arr[2];
             return z;
         }
+
 
 
         //  A public void method named SetX() that takes a double parameter. It assigns the parameter to the first element
         // of the field.4
 
-        void SetX(double inputX ){
-            arr[0] = inputX;
+        void SetX(double x ){
+            arr[0] = x;
         }
 
 
         //  A public void method named SetY() that takes a double parameter. It assigns the parameter to the second
         // element of the field.
         
-        void SetY(double inputY){
-            arr[1] = inputY;
+        void SetY(double y){
+            arr[1] = y;
         }
 
 
         //  A public void method named SetZ() that takes a double parameter. It assigns the parameter to the third element
         // of the field.
-        void SetZ(double inputZ){
-            arr[2] = inputZ;
+        void SetZ(double z){
+            arr[2] = z;
         }
 
         //  A public string constant method named ToString() that takes no parameters. It returns a string in the format
@@ -135,7 +148,7 @@ class NumChange{
             //visual studio code is not allowing this and 
             //seems to want me to include <sstream>
             std::stringstream out;
-            out << arr[0]<<".00 , "<< arr[1]<<".00 , "<< arr[2]<<".00 " ;
+            out << x.setprecision(2)<<", "<< y.setprecision(2)<<", "<< z.setprecision(2) ;
             return out.str();
         }
         //  A friend overloaded ostream operator. It displays the elements of the field in the same format as ToString().
