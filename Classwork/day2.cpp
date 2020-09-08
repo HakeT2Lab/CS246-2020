@@ -125,23 +125,3 @@ Abstraction:
 
 */
 
-/*
-Encapeulation:
-
-
-
-
-*/
-
-/*
-Inheritance   
-*/
-
-/*
-Polymorphism
-
-*/
-
-/*
-
-*/
