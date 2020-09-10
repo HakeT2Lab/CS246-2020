@@ -21,7 +21,7 @@ int SecondToLastOccurrence(double array[], int size, double number)
     //check thru the array
     for(int i = 0; i< size; i++){
         //if statement that checks if second to last index of array if the something is repeated
-        for(int j = 1; j < size; j++){
+        for(int j = 0; j < size; j++){
             if(array[i] == array[j]){
                 cout << array[i] << " ";
 
