@@ -144,21 +144,21 @@ class NumChange{
         // ''(x ,y ,z )'' where x , y, z are the elements of the field representing their respective coordinate. Furthermore,
         // they must be contain exactly two decimal points.
 
-        string ToString() const{
-            //visual studio code is not allowing this and 
-            //seems to want me to include <sstream>
-            std::stringstream out;
-            out << x.setprecision(2)<<", "<< y.setprecision(2)<<", "<< z.setprecision(2) ;
-            return out.str();
-        }
-        //  A friend overloaded ostream operator. It displays the elements of the field in the same format as ToString().
-        friend ostream& operater<< (ostream&  const NumChange& obj)
-        {
-            cut<< obj.ToString();
-            return cut;
+        // string ToString() const{
+        //     //visual studio code is not allowing this and 
+        //     //seems to want me to include <sstream>
+        //     std::stringstream out;
+        //     out << x.setprecision(2)<<", "<< y.setprecision(2)<<", "<< z.setprecision(2) ;
+        //     return out.str();
+        // }
+        // //  A friend overloaded ostream operator. It displays the elements of the field in the same format as ToString().
+        // friend ostream& operater<< (ostream&  const NumChange& obj)
+        // {
+        //     cut<< obj.ToString();
+        //     return cut;
 
       
-        }
+        // }
 
 
 };
