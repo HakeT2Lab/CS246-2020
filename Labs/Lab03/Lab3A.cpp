@@ -11,15 +11,21 @@ int PlaceTarget(int Array[], int Parameter, const int &Input ) {
         if( Array[i] <= Input || Array[i] > Input){
             Parameter =+ 1;
             cout << Array[i]<< ", ";
+
+            
+
         }
     }
 
-    cout<< "]"
+    cout<< "]";
 }
 /*
     -First go thru array
     -Second Find index that matches int PlaceTarget(int Array[], int Parameter, const int &input ) {
     -will need to increase size
     -Add Input into the array
+
+    - function returns the index
+    where the generic parameter would be if it were inserted in order.
 
 */
