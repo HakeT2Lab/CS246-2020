@@ -91,23 +91,23 @@ T MinL(T data[],int n)
 template<typename T>
 T MinB(T data[],int n)
 {
-	int hn = n/2;
-	T mn;
+	int hn = n/2; //C1 | 1
+	T mn;			//C2 | 1
 	
-	if(data[0] < data[n-1])
+	if(data[0] < data[n-1]) // C3  \ 1
 	{
 		mn = data[0];
 	}
-	else
+	else	//C4 \ 1
 	{
 		mn = data[n-1];
 	}
-
-	for(int i = 1;i <= hn;i += 1)
+	//includes when false and when true
+	for(int i = 1;i <= hn;i += 1) //C5 | 1 // Cs | (n/2) +1  
 	{
-		if(data[i] < data[n-i-1]) 
+		if(data[i] < data[n-i-1])  //C7 \ (n/2)
 		{
-			if(mn > data[i])
+			if(mn > data[i]) //C8 \ (n/2)
 			{
 				mn = data[i];
 			}
@@ -125,23 +125,25 @@ T MinB(T data[],int n)
 
 //Algorithm 5
 //What is its runtime function?
+// 2n+ 2
 //What is its Big-O?
+//
 bool IsPrimeO(int n)
 {
-	if(n >= -1 && n <= 1)
+	if(n >= -1 && n <= 1) //C1 = 1
 	{
 		return false;
 	}
-	else if(n < 0)
+	else if(n < 0) //C2 = 1
 	{
 		n *= -1;
 	}
 
-	for(int i = 2;i < n;i += 1)
+	for(int i = 2;i < n;i += 1)//C3(Consdiction)= n
 	{
-		if(n % i == 0)
+		if(n % i == 0) //C4 = n-1
 		{
-			return false;
+			return false; //C5 = 1
 		}
 	}
 	return true;
@@ -150,29 +152,36 @@ bool IsPrimeO(int n)
 
 //Algorithm 6
 //What is its runtime function?
+// 2sqrt(n) + 2
 //What is its Big-O?
-bool IsPrimeT(int n)
+// O(sqrt(n))
+bool IsPrimeT(int n)//least prime factor therum
 {
-	if(n >= -1 && n <= 1)
+	if(n >= -1 && n <= 1) //C1 = 1
 	{
 		return false;
 	}
-	else if(n < 0)
+	else if(n < 0) //C2 = 1
 	{
 		n *= -1;
 	}
 
-	for(int i = 2;i * i < n;i += 1)
+	for(int i = 2;i * i < n;i += 1) //C3 = sqrt(n)
 	{
-		if(n % i == 0)
+		if(n % i == 0) //C4 = sqrt(n)- 1
 		{
-			return false;
+			return false; //C5 = 1
 		}
 	}
-	return true;
+	return true; 
 }
 
 int main()
 {
-	return 0;
+	return 0; 
 }
+/*
+	Correct Runtime:
+
+ 
+ */
