@@ -1,7 +1,12 @@
+//next time use templates
+#include <iostream>
+#include <sstream>
+#include <string>
+
 class Set{
 
     private:
-        int Array[100] ={};
+        int Array[100];//T Array[100]
         int CurrSize;
 
     public:
@@ -28,6 +33,7 @@ class Set{
             if(this != &rhs){
                 CurrSize = rhs.CurrSize;
             }
+            return *this;
         }
 
         /*
@@ -44,11 +50,11 @@ class Set{
 
         */
            
-        void Add(const Parameter&){
+        void Add(const int &Parameter){
            
             for(int i = 0; i < CurrSize; i++){
                 if(Parameter != Array[i]){
-                    if(Parameter =< Array[i] && Parameter > Array[i]){
+                    if(Parameter <= Array[i] && Parameter > Array[i]){
                         Array[i] = Parameter; 
                     }
                 }
@@ -63,13 +69,13 @@ class Set{
             parameter is a member of the set.
 
         */
-        Void Remove(const Parameter&){
+        void Remove(const int &Parameter){
             //I was trying to compare arrays
-            int new Arr[100]= {};
+            int Arr[100]= {};
             for(int i =0; i < CurrSize; i++){
-                if(Parameter != Array[i]){
-                    Array[i] == Arr[i];
-                }
+              
+              Arr[i] = Array[i];
+               
             }
         }
 
@@ -83,16 +89,7 @@ class Set{
         */
         bool IsFull(){
           //long way / Worst case
-          for(int i = 0; i < CurrSize; i++){
-              if(Array[i] != 0){
-
-                if(Array[i] != 0 && Array[100] !=0){
-                    return true;
-                }else{
-                    return false;
-                }
-              }
-          }
+            return CurrSize == 100;
         }
 
         /*
@@ -101,11 +98,7 @@ class Set{
             otherwise, it returns false.
         */
         bool IsEmpty(){
-            for(int i = 0; i< CurrSize; i++){
-                if(Array[i] == 0){
-                    return true;
-                }
-            }
+            return CurrSize == 0;
         }
 
         /*
@@ -129,12 +122,14 @@ class Set{
             is a member of the set; 
             otherwise, it returns false.
         */
-        bool Contains(const parameter&)const{
+        bool Contains(const int &Parameter)const{
             for(int i = 0; i < CurrSize; i++){
                 if(Parameter == Array[i]){
                     return true;
                 }
+                
             }
+            return false;
         }
 
         /*
@@ -146,10 +141,15 @@ class Set{
             std::stringstream out;
 
             out << "{ ";
-
+                for(int i = 0; i < CurrSize; i++){
+                    out << Array[i];
+                    if(CurrSize -1 != i){
+                        out << ", ";
+                    }
+                }
 
             out << "} ";
-            return out.str;
+            return out.str();
         }
 
 
@@ -157,7 +157,7 @@ class Set{
             A friend overloaded ostream operator. It displays the
              elements of the set in the same format as ToString().
         */
-        friend std::ostream& operator << (std::ostream& out){
+        friend std::ostream& operator << (std::ostream& out, const Set& obj){
             out << obj.ToString();
 			return out;
         }
@@ -169,3 +169,4 @@ class Set{
 
 
 };
+
