@@ -68,14 +68,14 @@ void MidAppend(Array<T>& data,Array<T>& addon){
 		c3	\1		//if
 		c4	\1		//if
 		c5	\1
-		c6	\1		//for
+		c6	\1		
 		c7	\ 1		//for
 		c8	\n+1 	//for
 		c9	\n 		//for
 		c10	\n		//for
 		c11	\n		//for
 		c12	\n		//for
-		c13	\1
+		c13	\1		//for
 		c14	\1
 		c15	\1
 		c16	\1
