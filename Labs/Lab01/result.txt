@@ -1,0 +1,12 @@
+Section		Grade
+=========================== 
+Part A		1.80/5.00
+Part B		0.00/5.00
+===========================
+Total		1.80/5.00 
+
+Comment:
++ Part A, the function HasDuplicate() does 
+not perform requested task correcty. 
+
++ Part B is missing.
