@@ -87,8 +87,8 @@ void MidAppend(Array<T>& data,Array<T>& addon){
 
 int main()
 {
-	int ar1[4]= {1, 2, 5, 10};
-	int ar2[6]= {1, 4, 5, 7, 8, 10};
+	// int ar1[4]= {1, 2, 5, 10};
+	// int ar2[6]= {1, 4, 5, 7, 8, 10};
 
 
 	//data = [a, b, c, d, e];
