@@ -1,11 +1,11 @@
 Section		Grade
 ======================== 
-Problem 1	1.5/5
+Problem 1	2.0/5
 Problem 2	2.0/5
 Problem 3	2.0/5
 Problem 4	3.0/5
 ========================
-Total		8.5/20 
+Total		9.0/20 
 
 Comment:
 + Problem 1, the function does not perform 
