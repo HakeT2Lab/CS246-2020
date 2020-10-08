@@ -1,0 +1,67 @@
+/*
+Your objective is to write an array trace table of the array below for one of the three sorting methods (bubble sort,
+insertion sort or selection sort) discussed in the sorting lecture. The table should illustrate the swaps that will occur to
+the array when it is the argument for the sorting method. Make sure to indicate which method the table is implementing.
+
+using  array 5.9.6.1.2.8.7.4.3
+
+Bubble Sort
+
+
+(x , y) Swaped numbers
+
+5.9.6.1.2.8.7.4.3			Start
+
+5,(6,9),1,2,8,7,4,3
+5,6,(1,9),2,8,7,4,3
+5,6,1,(2,9),8,7,4,3
+5,6,1,2,(8,9),7,4,3
+5,6,1,2,8,(7,9),4,3
+5,6,1,2,8,7,(4,9),3
+5,6,1,2,8,7,4,(3,9)
+5,(1,6),2,8,7,4,3,9
+5,1,(2,6),8,7,4,3,9
+1,5,2,(6,8),7,4,3,9
+1,(2,5),6,8,7,4,3,9
+1,2,5,6,(7,8),4,3,9
+1,2,5,6,7,(4,8),3,9
+1,2,5,6,7,4,(3,8),9
+1,2,5,6,(4,7),3,8,9
+1,2,5,6,4,(3,7),8,9
+1,2,5,(4,6),3,7,8,9
+1,2,5,4,(3,6),7,8,9
+1,2,(4,5),3,6,7,8,9
+1,2,4,(3,5),6,7,8,9
+
+1,2,(3,4),5,6,7,8,9			end.
+
+
+
+Trace Table(Bubble sort)
+Step | Higher Num| Next Num | Array | is higher than next| is swaped?
+1	|		9	|	6	|5.9.6.1.2.8.7.4.3|	T	/
+2	|			|		|5,(6,9),1,2,8,7,4,3|	|T	|Y
+3	|		9	|	1	|	5,6,9,1,2,8,7,4,3|	|	|
+4	|			|		|	|	|	|
+5	|			|		|	|	|	|
+6	|			|		|	|	|	|
+7	|			|		|	|	|	|
+8	|			|		|	|	|	|
+9	|			|		|	|	|	|
+10	|			|		|	|	|	|
+11	|			|		|	|	|	|
+12	|			|		|	|	|	|
+13	|			|		|	|	|	|
+14	|			|		|	|	|	|
+15	|			|		|	|	|	|
+16	|			|		|	|	|	|
+17	|			|		|	|	|	|
+18	|			|		|	|	|	|
+19	|			|		|	|	|
+20	|			|		|	|	|
+	|			|		|	|	|
+	|			|		|	|	|
+
+
+
+
