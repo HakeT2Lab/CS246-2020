@@ -1,14 +1,20 @@
 Section		Grade
-======================== 
-Part A		0.85/2
-Part B		PND
-========================
-Total		0.85/5 
+========================== 
+Part A		0.85/2.00
+Part B		2.25/3.00
+==========================
+Total		3.10/5.00 
 
 Comment:
-+ Part a, does not compile.
++ Part A, does not compile.
 
-+ Part a, is missing the generic requirement.
++ Part A, is missing the generic requirement.
 
-+ Part a, the function is not performing the
++ Part A, the function is not performing the
 requested task.
+
++ Part B, there are some errors.
+
++ Part B, some methods are defined
+incorrectly.
+
