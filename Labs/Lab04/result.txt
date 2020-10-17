@@ -1,9 +1,15 @@
 Section		Grade
 =========================== 
 Part A		1.95/2.00
-Part B		 PND/3.00
+Part B		1.05/3.00
 ===========================
-Total		1.95/5.00 
+Total		3.00/5.00 
 
 Comment:
 + Part A has an error.
+
++ Part B, the function is not
+performing the required task.
+
++ Part B, the solutions will be
+inaccurate.

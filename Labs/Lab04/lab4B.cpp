@@ -13,7 +13,7 @@ bool Different(ds::mn::Node<T>* ar1, ds::mn::Node<T>* ar2){
 
 	ar1->Next->data;
 	ar2->Next->data;
-	f(ar1->data == ar2->data){
+	if(ar1->data == ar2->data){
 		return true;
 
 	}
