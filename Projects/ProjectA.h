@@ -41,7 +41,7 @@ class Integer{
             int n = interger.length();
           
             while(*interger >= '0' && *interger){
-                numberInt = interger[i] - 'i';
+                numberInt = interger[i] - '0';
                 t->data->link = numberInt;
                 i++;
             }

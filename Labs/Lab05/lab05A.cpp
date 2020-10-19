@@ -15,7 +15,6 @@ function returns 0.
 	... 3 8 2...
 
 */
-	
 double Maximum(Node<double>* root){
 
 

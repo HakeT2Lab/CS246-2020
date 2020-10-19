@@ -295,7 +295,7 @@ namespace ds
 				size = obj.size;
 				head = Copy(obj.head);
 			}
-
+			//deallocate memory
 			List<T>& operator=(const List<T>& rhs)
 			{
 				if(this != &rhs)
@@ -306,7 +306,7 @@ namespace ds
 				}
 				return *this;
 			}
-
+			//delete memory
 			~List() 
 			{
 				Clear(head);
@@ -430,7 +430,7 @@ namespace ds
 				}
 			}
 
-			//ct must be a node of the list
+			//ct must be a node of the list//  serches after begining
 			Node<T>* Search(Node<T>* ct,const T& item) const
 			{
 				Node<T>* t = ct;
@@ -441,7 +441,7 @@ namespace ds
 				}
 				return t;
 			}	
-		
+			//search begining
 			Node<T>* Search(const T& item) const
 			{
 				Node<T>* t = head;
@@ -465,7 +465,7 @@ namespace ds
 				return false;
 			}
 
-			Node<T>* Get(int idx) 
+			Node<T>* Get(int idx) //ulong can be used to replace int but there is no need
 			{
 				if(idx < 0 || idx >= size)
 				{
@@ -479,17 +479,18 @@ namespace ds
 					while(i < idx)
 					{
 						i += 1;
-						t = t->next;
+						t = t->next; //t = t->link	for singlily linked nodes
 					}
 					return t;
 				}
 			}
-
+	
+			//indexer
 			T& operator[](int idx) 
 			{
 				if(idx < 0 || idx >= size)
 				{
-					throw "Out of Bound";
+					throw "Out of Bound";//throw error rather than return 0
 				}
 				else
 				{
@@ -499,7 +500,7 @@ namespace ds
 					while(i < idx)
 					{
 						i += 1;
-						t = t->next;
+						t = t->next; //t = t->link	for singlily linked nodes
 					}
 					return t->data;
 				}
