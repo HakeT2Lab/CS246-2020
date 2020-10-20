@@ -17,7 +17,7 @@ namespace ds
 		};
 
 		template<typename T>
-		Node<T>* Create(const T& itm)
+		Node<T>* Create(const T& itm)//new node equal to pera
 		{
 			Node<T> *t = new Node<T>;
 			t->data = itm;
