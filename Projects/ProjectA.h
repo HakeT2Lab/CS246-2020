@@ -55,10 +55,31 @@ class Integer{
 
         /*A public overloaded constructor that takes an int parameter. It converts the parameter and assigns it
     to the integer field.*/
+        Interger(int interger){
+            //converts int to string
+            std::stringstream = string;
+            
+            string << interger->data;
+            string SValue;
+            string >> SValue;
+
+            return iterger->link = SValue;
+        }
+
 
         /*A public overloaded constructor that takes an double parameter. It converts the parameter and assigns
     it to the integer field. When converting a double to an int, the decimal portion is truncated.*/
 
+        Interger(double interger){
+            //converts double to string
+            std::stringstream = string;
+            
+            string << interger->data;
+            string SValue;
+            string >> SValue;
+
+            return iterger->link = SValue;
+        }
     //A public copy constructor.
 
     //A public assignment operator.
