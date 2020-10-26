@@ -8,6 +8,8 @@ It appends the linked list referenced by addon to the linked list referenced by 
 node of data. For instances, if data = [a, b, c, d, e] and addon = [f, g, h, i, j]; then after the call of the function,
 data = [a, b, f, g, h, i, j, c, d, e].
 
+a b {addon} c d
+1 2    3    4 5
 
 1) Create a code that will create a new node as to not effect the root(or data in this case).
 
@@ -21,23 +23,33 @@ data = [a, b, f, g, h, i, j, c, d, e].
 4) Return tmp.
 */
 
-template <typename>
+template <typename T>
 void MidAppend(Node<T>*& data,Node<T>* addon){
 	int DataIdxCount= 0;
 	int SaveIdxCount= 0;
 	int AddonIdxCount = 0;
+
+	
 	
 	// node* Appended = new node;//blank linked list
-	// node *tmp = new node; // 1)
+	Node<T> *tmp = new Node; // 1)
 
 	Node<T>* save = data;//creates a save of data, so i can treverse it and get the length
 	while(data->next != NULL){
 		save = save->next;//traverses linklist
 		DataIdxCount++;//counts nodes in linkedlist
-
+	}
+	while(addon->next != NULL){
 		addon = addon->next;//trevrse addon
 		AddonIdxCount++;
+		
 	}
+
+	if(Data != NULL){
+
+	}
+
+
 	while(data != NULL){
 		if(SaveIdxCount == DataIdxCount/2){
 			tmp = tmp->next; //first move space   3
@@ -52,9 +64,10 @@ void MidAppend(Node<T>*& data,Node<T>* addon){
 					5) increment the count
 			*/
 		}else{
-			tmp = tmp->next;
-			data = data->next;
-			tmp->link = data;
+			tmp.Create(data->next);
+			// tmp = tmp->next;
+			//data = data->next;
+			// tmp->link = data->next;
 			SaveIdxCount++;
 			/*	What I think this will do:
 				While Save(tmp)count = dataCount/2
@@ -81,9 +94,9 @@ op2 = [1, 0, 0, 1], the function will return true. Do not assume that the lists 
 bool NotEqual(Node<bool>* op1,Node<bool>* op2){
 
 	while(op1 != NULL && op2 != NULL){ 
-		if(op1->next != op2->data){//identical length linkedlist
-			if(op1->data > op2->data || op1->data > op2->data){
-				return true;
+		if(op1->next != op2->next){//identical length linkedlist
+			if(op1->data > op2->data || op1->data < op2->data){
+				return true;	
 				
 			}
 		}

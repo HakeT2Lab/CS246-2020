@@ -1,0 +1,39 @@
+lab5B
+
+data = [a, b, c, d, e]
+save=  [a, b, c, d, e]  Travrsed thru DataIdxCount = 5
+
+addon = [f, g, h, i, j] Traversed AddonIsxCount = 5 Is currently pointing at 'J'
+
+While Data != NULL
+
+
+tmp= empty linked list
+saveCount= 0
+
+   
+1st trigger 
+    SaveCount is = 0 so it goes to else and is !=  to Data/count/2 (2 in this case)
+    1) Creates a new node in tmp(using helper function)
+         and makes it = to the next node of data which is 'B'
+
+
+
+
+
+    saveCOunt =1
+2nd
+
+    tmp goes to next node
+    tmp = a, b
+    saveCOunt
+triggers If condiction
+    tmp = a , b, {}
+
+
+
+
+
+
+
+

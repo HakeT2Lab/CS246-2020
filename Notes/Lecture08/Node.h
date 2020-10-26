@@ -24,7 +24,7 @@ namespace ds
 			t->link = NULL;
 			return t;
 		}
-
+		
 		template<typename T>
 		void Insert(Node<T>*& rt,Node<T>* nd,const T& itm)
 		{
