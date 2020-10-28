@@ -1,0 +1,16 @@
+Integer(stringstream::string integer){
+            // int numberInt= 0;// Tracks place of number Ex: 1's, 10's 100's places
+            // while(interger->data >= '0' && interger->data != NULL){ //while the string (interger) >= string 0 
+            //     numberInt = interger + '0';
+            //     if(interger->data >= 0 !! interger->data < 0){// if the data is a real number( covers inf to -inf)
+            //         //I need something to deal with doubles
+            //         numberInt = interger->data + '0'; // Type conversion makes the data of the node a interger
+            //         t->data->link = numberInt;  // Changes the data(rather than the node) into the newly converted information
+            //         t = t->next;    //traverses the linklist
+            //         interger = interger->next;  //traverses the linklist
+            //     }else{  // initialize the integer field to 0
+            //         t->link = 0; //Set first node to 0(WIP)
+            //         t->next->link = NULL;//Sets next node NULL so the while loop terminates
+            //     }
+            // }
+}
