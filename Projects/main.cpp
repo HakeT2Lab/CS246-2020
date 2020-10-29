@@ -3,9 +3,13 @@
 #include <cstdlib>
 #include <ctime>
 #include "Node.h"
+#include "ProjectA.h"
+
+using namespace ds::sn;
 
 
 int main(){
-    
-    return 0;
+  Integer<int>* Test = new Integer<int>(54);
+  std::cout<<Test->ToString();
+  return 0;
 }
