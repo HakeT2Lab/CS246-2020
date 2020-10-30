@@ -1,7 +1,20 @@
-//due 29 of october
-//interger field means to move information into a linklist
-//Ex: number 123 covers 3 Nodes.
-//possitve in nodes
+/*
+    This code was tested in Replit where It had run the Calls that are inluded in the main.cpp
+
+    I was not able to get The Addiction and Subtraction Methods to be called at all, Addiction is commented out
+    I atempted to do the ostream(and the istream) but ran into the same issue as the Addiction method
+    I Struggled with the copy/ assignment operators, I think for them I am just reprinting all the values of the link list
+        when given this:
+                        Integer* intTest = new Integer(12345);
+                        Integer* deepCopy = new Integer(intTest);
+                        cout<<deepCopy->ToString();
+
+                        //I got it to run something, however, I only ever got an adress, and any other type of
+                        //minipulation caused errors
+
+                        Whats in the Integer(Integer* const obj) method is the only thing I got to run without errors.
+
+*/
 
 #include <iostream>
 #include <string>
@@ -144,26 +157,39 @@ class Integer{
         }
       }
 
-      friend Integer& operator +(const Integer& FirstLList, const Integer& SecondLList ){
-        //check if both are not empty
-        while(FirstLList->link != NULL && SecondLList->link != NULL){
-          //check if one linked-list is longer than the other
-          if(FirstLList->link != NULL && SecondLList->link == NULL){
-            FirstLList = FirstLList->link;
-          }else{
-            SecondLList = SecondLList->link;
-          }
-          Insert(Solution,Solution,(FirstLList + SecondLList));
-          Create(Solution);
+      Integer(Integer* const obj){//obj should be Test from main
+        cout<<"Interger* called\n";
+        // Integer const &INCopy =  obj;
+        Integer* IntCopy= new Integer;
+        // IntCopy= integerNode->link;
+        cout<<"\n"<<IntCopy<<"\n\n";
 
-          Solution = Solution->link;
-          FirstLList = FirstLList->link;
-          SecondLList = SecondLList->link;          
-        }
-
-
-        return FirstLList + SecondLList;
+        
       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //Addition Operator
+    // friend Integer* operator +(const Integer*& int1, const Integer*& int2 ){
+    //   cout<<"Using addition\n";
+    //   // Integer integer;
+    //   // integer= this* + int1;
+    //    Integer* INCopy = new Integer;
+
+        
+    //   return INCopy;
+    // }
 
 
 
