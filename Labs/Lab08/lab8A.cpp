@@ -13,11 +13,14 @@ help define GCD().
 
 ulong GCD(ds::Vector<ulong>& data){
   std::cout<<"\nActive\n";
+  int Divisor= 0;
   if(data.Length() != 0 ){
-    for(int i =0; i< data.Length(); i++){
-      if(){
+    for(int i =0; i< data.Length();){
+      Divisor++;
+      if(data[i] % Divisor == 0){//ex: 5/1 = 5  R =0, 5/2 = 2 R=1;
         
       }
+
     }
   }
 
