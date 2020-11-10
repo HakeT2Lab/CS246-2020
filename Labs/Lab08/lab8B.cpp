@@ -1,8 +1,5 @@
 #include <iostream>
 #include <fstream>
-
-#include <stdlib.h>     //Used for random numbers
-
 #include <string>
 #include "Node.h"
 #include "Vector.h"
@@ -16,28 +13,32 @@ or data does not have a mode, it returns 0.
 */
 
 double Mode(ds::Vector<double>& data){
-  int count=0;
-  int c=0;
-  std::cout<<data.ToString();
-  if(data.Length() != 0){
-    std::cout<<"\nNot Zero\n";
-    for(int i = 0; i<data.Length();i++){
-      if(data[c] == data[i]){
-        count++;
-      }
-      if(i == data.Length() - 1){
-        i=0;
-        c++;
-        std::cout<< c <<"\n";
-        count=0;
-      }else if(c == data.Length()-1){
-        std::cout<<"\n No Mode\n";
-        return 0;
-      }
-    }
-  }
+	int count=0;
+	int saveCount=0;
+	int c=0;
+	int mode= 0;
 
-
+	std::cout<<data.ToString();
+	if(data.Length() != 0){
+    	for(int i = 0; i<data.Length();i++){
+    		if(data[c] == data[i]){//every time the same number is the same increase count
+        		count++;
+      		}
+      		if(i == data.Length() - 1){
+        		if(saveCount<count){
+          			mode = data[c];//goes thru data once, mode is set to the first elements
+          		//if count is higher the second time replace mode with the new ele
+       			}
+        		i=0;//reset loop
+        		c++;//increase data[c];
+        		saveCount=count;//saves count from last loop cycle
+        		count=0;//reset count
+      		}else if(c == data.Length()-1){
+        		std::cout<<"Final Mode: "<<mode<<"\n";
+        		return mode;
+      		}
+    	}
+  	}
   return 0;
 }
 
@@ -45,18 +46,13 @@ double Mode(ds::Vector<double>& data){
 
 int main()
 {
-  ds::Vector<double> Data;
-  Data=15;
-  std::cout<<"\n"<<Data.Length()<<"\n";
+	ds::Vector<double> Data;
+  	double array[] = {1,1,2,3,4,2,4};
+  	std::cout<<"\n"<<Data.Length()<<"\n";
 
-  for(int i = 0; i< Data.Length(); i++){
-    // Data 
-  }
-
-
-
-  
-  Mode(Data);
-
+  	for(int i = 0; i< 7; i++){
+    	Data.Insert(array[i]);
+  	}
+  	Mode(Data);
 	return 0;
 }
