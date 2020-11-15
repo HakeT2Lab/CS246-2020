@@ -1,0 +1,11 @@
+Section		Grade
+============================ 
+Part A		3.30/5.00
+============================
+Total		3.30/5.00
+
+Comment:
++ Part A, the function is inaccurate.
+
++ Part A, the function is not performing
+the required task accurately.
