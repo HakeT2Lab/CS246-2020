@@ -13,25 +13,44 @@ help define GCD().
 
 ulong GCD(ds::Vector<ulong>& data){
   std::cout<<"\nActive\n";
-  int Divisor= 0;
-  if(data.Length() != 0 ){
-    for(int i =0; i< data.Length();){
-      Divisor++;
-      if(data[i] % Divisor == 0){//ex: 5/1 = 5  R =0, 5/2 = 2 R=1;
-        
-      }
+  int GCD= 0;
+  int k=0;
 
-    }
+  int saveGCD;
+  if(data.Length() != 0 ){
+    for(int i =0; i< data.Length();i++){
+      std::cout<<"\n Data[i]: "<<data[i];
+      std::cout<<"\n Data[k]: "<<data[k]<<"\n";
+      saveGCD= data[i] % data[k];// when i = to the size-1 incrament k
+      // GCD=saveGCD;
+      if(saveGCD>GCD){
+        GCD= saveGCD;
+      }
+      std::cout<<"\n GCD= "<<GCD<<"\n";
+      if(i == data.Length()-1){
+        if(k == data.Length()-1){
+          return GCD;
+        }
+        i=-1;//so it counts the first element as 0 seems to make it start from 1
+        k++;
+        saveGCD=0;
+      }
+    } 
   }
 
 
-
+  std::cout<<"\n Returned Empty";
   return 0;
 }
 
 int main()
 {
   ds::Vector<ulong> Data;
+  double array[] = {2,6,24};
+
+  for(int i = 0; i< 3; i++){
+    Data.Insert(array[i]);
+  }
   GCD(Data);
 
 	return 0;
