@@ -1,9 +1,9 @@
 Section		Grade
 ============================ 
 Part A		0.80/2.00
-Part B		0.00/3.00
+Part B		1.00/3.00
 ============================
-Total		0.80/5.00
+Total		1.80/5.00
 
 Comment:
 + Part A, the function has errors.
