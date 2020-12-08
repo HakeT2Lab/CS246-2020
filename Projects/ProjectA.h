@@ -140,7 +140,7 @@ class Integer{
 
       //A public destructor. I think i have to set the LinkedLists to zero
       ~Integer(){
-
+        delete integerNode;
       }
 
       friend Integer operator+(const Integer& int1, const Integer& int2){
@@ -190,29 +190,7 @@ class Integer{
         int sum = intOneNum + intTwoNum;
         
         cout<<"\n\n Sum: "<<sum<<"\n";
-        // cout<<"\n\n Counts:\n int1: "<<intOCount<<"\n int2: "<<intTCount<<"\n";
-        // int n = intOCount>intTCount ? intOCount : intTCount;
-        // int array[n];
-        
-        // for (int i = n; i > 0; i--) {
-        //   array[i] = sum % 10;
-        //   sum /= 10;
-        // }
 
-        // Integer* newInt= new Integer(sum);
-        // cout<<"Test int sum: "<<newInt->ToString();
-        // for(int i = 1; i<=n;i++){
-        //   cout<<"\n"<<array[i];
-        //   Insert(retInteger,retInteger, array[i]);
-        // }
-
-        // cout<<"\n\n New integer: "<<retInteger.ToString()<<"\n";
-
-        // cout<<"\n"<<wholeNum<<"\n";
-        
-        //  cout<< int1.ToString();
-        // int1.integerNode->link;
-    
 
         return Integer(sum);
       }
@@ -248,6 +226,32 @@ class Integer{
 
         return Integer(diffrence);
       }
+
+
+      const Integer operator+=(const Integer& intNum){
+        Node<int>* copyintNum = intNum.integerNode;
+        
+        std::cout<<"\n\nTest intNum: "<< intNum.ToString() <<"\n";
+
+        // Integer& sum = +Integer(sum)();
+
+
+
+        /*
+        int func2(int x){
+          int v2 = func1(x) / 4;
+        }
+        
+        */
+
+
+
+
+
+        return intNum;
+      }
+
+
 
       friend Integer operator!=(const Integer& int1, const Integer& int2){
         Node<int>* copyInt1 = int1.integerNode;
@@ -403,10 +407,13 @@ class Integer{
         return out.str();
       }
 
-    //   friend std::ostream& operator<<(std::ostream& out, const Integer* obj){
-		// 		cout << obj;
-		// 		return out;
-    //   }
+      friend std::ostream operator<<(std::ostream& out, const Integer obj){
+				cout << obj.ToString();
+
+
+
+				return out;
+      }
     // A friend overloaded istream operator. It reads into the inetger field.
     //   friend std::istream& operator>>(std::istream& in, const Integer<T>& obj){
     //     in>> obj.ToString;
